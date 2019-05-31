@@ -13,13 +13,14 @@ async function handleRequest(request) {
         console.log('Got num: ', num)
         let fb = getFizzBuzz(num)
         console.log('Got fb: ', fb)
-        const response = new Response(fb,
+        let response = new Response(fb,
             {status: 200, statusText: 'ok'})
+        return response
     }
     else {
         let response = await fetch('https://thegagne.github.io/fizzbuzz.html')
+        return response
     }
-    return response
 }
 
 function parseFizzBuzzUrl(url) {
