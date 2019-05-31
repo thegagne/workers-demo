@@ -17,7 +17,7 @@ async function handleRequest(request) {
             {status: 200, statusText: 'ok'})
     }
     else {
-        let response = await fetch('https://www.wikipedia.org')
+        let response = await fetch('https://thegagne.github.io/fizzbuzz.html')
     }
     return response
 }
